@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaDev - Conectando empresas e devs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/base.css" />
+</head>
+<body class="bg-gray-50">
+
+    <!-- whatsapp floating button -->
+    <a href="https://api.whatsapp.com/send?phone=99999999" class="float pulse-animation" target="_blank">
+    <i class="fa fa-whatsapp float-button"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full gradient-bg flex items-center justify-center">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-gray-900">Conecta<span class="text-blue-500">Dev</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#para-empresas" class="text-gray-700 hover:text-blue-600 px-3 py-2">Para Empresas</a>
+                    <a href="#para-devs" class="text-gray-700 hover:text-blue-600 px-3 py-2">Para Devs</a>
+                    <a href="#como-funciona" class="text-gray-700 hover:text-blue-600 px-3 py-2">Como Funciona</a>
+                    <a href="#depoimentos" class="text-gray-700 hover:text-blue-600 px-3 py-2">Depoimentos</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="#cadastro-empresa" class="px-4 py-2 rounded-md text-sm font-medium border border-blue-500 text-blue-600 hover:bg-blue-50 mr-2">Sou Empresa</a>
+                    <a href="#cadastro-dev" class="px-4 py-2 rounded-md text-sm font-medium text-white gradient-bg hover:bg-blue-600">Sou Dev</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4 shadow-lg rounded-b-lg">
+            <a href="#para-empresas" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Para Empresas</a>
+            <a href="#para-devs" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Para Devs</a>
+            <a href="#como-funciona" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Como Funciona</a>
+            <a href="#depoimentos" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Depoimentos</a>
+            <div class="mt-2 pt-2 border-t border-gray-200">
+                <a href="#cadastro-empresa" class="block px-3 py-2 rounded-md text-center text-blue-600 border border-blue-500 hover:bg-blue-50 mb-2">Sou Empresa</a>
+                <a href="#cadastro-dev" class="block px-3 py-2 rounded-md text-center text-white gradient-bg hover:bg-blue-600">Sou Dev</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    <span class="gradient-text">ConectaDev</span> - Onde empresas e devs se encontram para criar o futuro!
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Empresas encontram talentos tech. Desenvolvedores encontram projetos incríveis. Tudo em um só lugar.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#cadastro-empresa" class="px-6 py-3 rounded-lg gradient-bg text-white font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl pulse-animation">
+                        Cadastre seu projeto agora!
+                    </a>
+                    <a href="#cadastro-dev" class="px-6 py-3 rounded-lg bg-white border border-blue-500 text-blue-600 font-medium hover:bg-blue-50 transition-all shadow hover:shadow-md">
+                        Crie seu perfil gratuitamente!
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="src/img/project.svg" alt="Devs trabalhando juntos" class="w-full floating">
+                <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-blue-100 rounded-full -z-10 opacity-30"></div>
+                <div class="absolute -top-8 -right-8 w-64 h-64 bg-purple-100 rounded-full -z-10 opacity-30"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Empresas Section -->
+    <section id="para-empresas" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl my-10">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white text-blue-600 shadow-sm mb-4">
+                <i class="fas fa-building mr-2"></i> Para Empresas
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Encontre os melhores desenvolvedores para seu projeto</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Cadastre seu projeto e receba candidaturas de profissionais qualificados.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Publicação rápida</h3>
+                <p class="text-gray-600">Cadastre projetos em minutos e comece a receber candidaturas imediatamente.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Busca inteligente</h3>
+                <p class="text-gray-600">Filtre desenvolvedores por habilidades específicas (front-end, back-end, full-stack, etc.).</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Painel intuitivo</h3>
+                <p class="text-gray-600">Gerencie as candidaturas dos desenvolvedores em uma dashboard responsiva.</p>
+            </div>
+        </div>
+        <div class="mt-16 text-center">
+            <a href="#cadastro-empresa" class="px-8 py-4 rounded-lg gradient-bg text-white font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl inline-flex items-center pulse-animation">
+                <i class="fas fa-rocket mr-3"></i> Cadastre seu projeto agora!
+            </a>
+        </div>
+    </section>
+
+    <!-- Para Devs Section -->
+    <section id="para-devs" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-600 shadow-sm mb-4">
+                    <i class="fas fa-code mr-2"></i> Para Desenvolvedores
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mostre seu talento e trabalhe nos melhores projetos</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Crie seu perfil, destaque suas habilidades e encontre oportunidades que combinam com você.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 gradient-bg rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <p class="ml-3 text-gray-700">Perfil personalizável com GitHub, portfólio e todas suas stacks</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 gradient-bg rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <p class="ml-3 text-gray-700">Alertas de projetos compatíveis com suas habilidades</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 gradient-bg rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <p class="ml-3 text-gray-700">Processo simples de candidatura com apenas alguns cliques</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#cadastro-dev" class="px-6 py-3 rounded-lg gradient-bg text-white font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl">
+                        Comece agora gratuitamente
+                    </a>
+                    <a href="#como-funciona" class="px-6 py-3 rounded-lg bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all shadow hover:shadow-md">
+                        Veja como funciona
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <img src="src/img/dev.svg" alt="Desenvolvedor feliz" class="w-full floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="como-funciona" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl my-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simples e eficiente em apenas 3 passos</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Conectamos empresas com os talentos certos de forma rápida e inteligente.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-3xl font-bold">
+                    1
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Cadastro</h3>
+                <p class="text-gray-600">Empresas postam projetos, devs criam perfis completos destacando suas habilidades.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-3xl font-bold">
+                    2
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Match</h3>
+                <p class="text-gray-600">Nosso algoritmo recomenda os melhores projetos baseadas nas habilidades dos desenvolvedores.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mb-6 text-white text-3xl font-bold">
+                    3
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Conexão</h3>
+                <p class="text-gray-600">A empresa recebe candidaturas e seleciona o desenvolvedor ideal para seu projeto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-10">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-100 text-purple-600 shadow-sm mb-4">
+                <i class="fas fa-quote-left mr-2"></i> Depoimentos
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que nossos usuários estão dizendo</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold text-gray-900">Ciclana dos Santos</h4>
+                        <p class="text-gray-600">CTO @TechInnovate</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "Encontrei um dev excepcional para minha startup em apenas 3 dias! A plataforma é intuitiva e os candidatos são muito bem qualificados."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+             <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/20.jpg" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold text-gray-900">Beltrano Ferreira</h4>
+                        <p class="text-gray-600">Python Developer</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "Sou iniciante e consegui um projeto incrível em minha primeira experiência e primeiro contato com uma empresa de tecnlogia. Super recomendo"
+                </p>
+                <div class="mt-4 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold text-gray-900">Fulano Mendes</h4>
+                        <p class="text-gray-600">Dev Full-Stack</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "A ConectaDev me conectou a projetos que nunca imaginei! Em um mês já estava trabalhando remotamente para uma empresa na Europa."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold text-gray-900">Fulana Pereira</h4>
+                        <p class="text-gray-600">CTO @TechDevs</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "Decidi cadastrar meus projetos na ConectaDev e obtive resposta de vários devs comprometidos em trabalhar."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section id="cta-final" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="gradient-bg rounded-3xl p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Pronto para começar sua jornada?</h2>
+            <p class="text-white text-xl mb-10 max-w-2xl mx-auto">
+                Junte-se à comunidade que está transformando a contratação de talentos tech.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#cadastro-empresa" class="px-8 py-4 rounded-lg bg-white text-blue-600 font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+                    <i class="fas fa-building mr-2"></i> Sou Empresa
+                </a>
+                <a href="#cadastro-dev" class="px-8 py-4 rounded-lg bg-indigo-900 text-white font-bold hover:bg-indigo-800 transition-all shadow-lg hover:shadow-xl">
+                    <i class="fas fa-code mr-2"></i> Sou Desenvolvedor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+                <div class="md:col-span-2">
+                    <a href="#" class="flex items-center mb-6">
+                        <div class="h-10 w-10 rounded-full gradient-bg flex items-center justify-center">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <span class="ml-3 text-2xl font-bold">Conecta<span class="text-blue-400">Dev</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        A plataforma que conecta empresas aos melhores talentos tech e desenvolvedores aos projetos mais interessantes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Para Empresas</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cadastrar projetos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Encontrar talentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Planos e preços</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Para Devs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Criar perfil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Encontrar projetos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contato</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> contato@conectadev.com</li>
+                        <li class="text-gray-400"><i class="fas fa-phone-alt mr-2"></i> (11) 99999-9999</li>
+                        <li class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> Canoinhas, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 ConectaDev. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Forms (hidden by default) -->
+    <div id="cadastro-empresa" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-8 relative">
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Cadastro para Empresas</h3>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="company-name">
+                        Nome da Empresa
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="company-name" type="text" placeholder="Ex: Tech Solutions Ltda">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="company-email">
+                        E-mail Corporativo
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="company-email" type="email" placeholder="seu@empresa.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="company-password">
+                        Senha
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="company-password" type="password" placeholder="••••••••">
+                </div>
+                <button class="w-full gradient-bg text-white py-3 px-4 rounded-lg font-bold hover:opacity-90 transition-all" type="button">
+                    Criar Conta Empresarial
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cadastro-dev" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-8 relative">
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Cadastro para Desenvolvedores</h3>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="dev-name">
+                        Seu Nome
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="dev-name" type="text" placeholder="Ex: João Silva">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="dev-email">
+                        Seu E-mail
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="dev-email" type="email" placeholder="seu@email.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="dev-password">
+                        Senha
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="dev-password" type="password" placeholder="••••••••">
+                </div>
+                <button class="w-full gradient-bg text-white py-3 px-4 rounded-lg font-bold hover:opacity-90 transition-all" type="button">
+                    Criar Perfil de Dev
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/index.js"></script>
+</body>
+</html>
